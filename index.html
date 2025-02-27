@@ -5,53 +5,56 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>County Health Data Visualization</title>
     <link rel="stylesheet" href="css/styles.css">
-    <script src="https://d3js.org/topojson.v3.min.js"></script>
     <script src="https://d3js.org/d3.v7.min.js"></script>
 </head>
 <body>
-    <div class="container">
-        <header>
-            <h1>County Health Data Visualization</h1>
-            <h3>By Saad Ahmed Mohammed</h3>
-            <p>Data Source: National Health Data 2024</p>
-        </header>
-        
+
+    <!-- Sidebar -->
+    <div class="sidebar">
+        <h1>County Health Data</h1>
+        <h3>By Saad Ahmed Mohammed</h3>
+        <p>Data Source: National Health Data 2024</p>
+
         <div id="controls" class="controls">
             <label for="attribute-select">Choose an Attribute:</label>
             <select id="attribute-select">
                 <option value="elderly_percentage">Elderly Population (%)</option>
                 <option value="percent_no_health_insurance">Lack of Health Insurance (%)</option>
                 <option value="median_household_income">Median Household Income</option>
-            <option value="education_less_than_high_school_percent">Education less than high school (%)</option>
-        </select>
+                <option value="education_less_than_high_school_percent">Education Less Than High School (%)</option>
+            </select>
+            <p>Y-Axis Attribute for Scatterplot</p>
+        </div>
     </div>
 
-    <div class="visualizations">
-        <div class="charts-container">
+    <!-- Main Content -->
+    <div class="main-content">
+        <div class="visualizations">
             <div class="chart-item">
                 <h2>Histogram</h2>
                 <div id="histogram-elderly" class="chart"></div>
             </div>
             <div class="chart-item">
+                <label for="x-attribute-select" >Choose X-Axis Attribute:</label>
+    <select id="x-attribute-select" style="width:50%" >
+        <option value="elderly_percentage">Elderly Population (%)</option>
+        <option value="percent_no_health_insurance">Lack of Health Insurance (%)</option>
+        <option value="median_household_income">Median Household Income</option>
+        <option value="education_less_than_high_school_percent">Education Less Than High School (%)</option>
+    </select>
+    <p>X-Axis Attribute for Scatterplot</p>
                 <h2>Scatter Plot</h2>
+                
                 <div id="scatterplot" class="chart"></div>
             </div>
-        </div>
-
-        <div class="maps-container">
-            <h2>Choropleth Maps</h2>
-            <div class="maps-grid">
-                <div class="map-item">
-                    <!-- <h3>Elderly Population (%)</h3> -->
-                    <div id="map-elderly" class="map"></div>
-                </div>
-                
+            <div class="map-item">
+                <h2>Choropleth Map</h2>
+                <div id="map-elderly" class="map"></div>
             </div>
         </div>
     </div>
-</div>
-
-<script src="js/topojson.v3.js"></script>
-<script src="js/script.js"></script>
+    <script src="js/topojson.v3.js"></script>
+    <script src="js/script.js"></script>
 </body>
 </html>
+

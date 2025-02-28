@@ -56,6 +56,7 @@ Code Structure:
 •	script.js → Handles data loading, processing, and visualization codes.
 Live deployment Link: https://project1-visual-interfaces.vercel.app/
 Github repository link: https://github.com/saadahmed540/Project1VisualInterfaces
+Demo Video Link: https://drive.google.com/file/d/1CZV1nGNkjvkN6ihvNtIt-s7-DRW6qn-E/view?usp=sharing
 
 How to Access & Run the Project:
 1.	Clone the project from GitHub : https://github.com/saadahmed540/Project1VisualInterfaces
